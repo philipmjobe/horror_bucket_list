@@ -1,18 +1,33 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <h1>All Movies</h1>
+    <div v-for="movie in movies" :key="movie.id">
+      <h2>{{ movie.name }}</h2>
+      <img src="box_art" v-bind:alt="movie.name" />
+    </div>
   </div>
 </template>
 
-<script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+<style></style>
 
+<script>
+import axios from "axios";
 export default {
-  name: "Home",
-  components: {
-    HelloWorld,
+  data: function () {
+    return {
+      movies: [],
+    };
+  },
+  created: function () {
+    this.indexMovies();
+  },
+  methods: {
+    indexMovies: function () {
+      axios.get("/movies").then((response) => {
+        console.log("movies index", response);
+        this.movies = response.data;
+      });
+    },
   },
 };
 </script>
