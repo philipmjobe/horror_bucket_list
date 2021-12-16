@@ -1,14 +1,19 @@
 <template>
   <div class="home">
     <h1>All Movies</h1>
-    <div v-for="movie in movies" :key="movie.id">
+    <div v-for="movie in movies" v-bind:key="movie.id">
       <h2>{{ movie.name }}</h2>
-      <img src="box_art" v-bind:alt="movie.name" />
+      <img v-bind:src="movie.box_art" v-bind:alt="movie.name" />
     </div>
   </div>
 </template>
 
-<style></style>
+<style>
+img {
+  height: 400px;
+  width: 300px;
+}
+</style>
 
 <script>
 import axios from "axios";
