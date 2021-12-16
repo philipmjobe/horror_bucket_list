@@ -5,8 +5,6 @@ import Signup from "../views/Signup.vue";
 import Login from "../views/Login.vue";
 import Logout from "../views/Logout.vue";
 import MoviesIndex from "../views/MoviesIndex.vue";
-// import NewList from "../views/Newlist.vue";
-
 Vue.use(VueRouter);
 
 const routes = [
@@ -19,7 +17,6 @@ const routes = [
   { path: "/login", name: "login", component: Login },
   { path: "/logout", name: "logout", component: Logout },
   { path: "/movies", name: "movies-index", component: MoviesIndex },
-  // { path: "/lists/new", name: "list-new", component: NewList },
 
   {
     path: "/about",

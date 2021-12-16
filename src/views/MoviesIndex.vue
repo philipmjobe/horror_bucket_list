@@ -4,7 +4,18 @@
     <div v-for="movie in movies" v-bind:key="movie.id">
       <h2>{{ movie.name }}</h2>
       <img v-bind:src="movie.box_art" v-bind:alt="movie.name" />
+      <button v-on:click="showMovie(movie)">More Info</button>
     </div>
+    <dialog id="movie-details">
+      <form method="dialog">
+        <h1>Movie Info</h1>
+        <p>Name: {{ currentMovie.name }}</p>
+        <p>Plot: {{ currentMovie.description }}</p>
+        <p>Sub Genre: {{ currentMovie.sub_genre }}</p>
+        <button>Add To Watch List</button>
+        <button>Close</button>
+      </form>
+    </dialog>
   </div>
 </template>
 
@@ -21,6 +32,7 @@ export default {
   data: function () {
     return {
       movies: [],
+      currentMovie: {},
     };
   },
   created: function () {
@@ -32,6 +44,10 @@ export default {
         console.log("movies index", response);
         this.movies = response.data;
       });
+    },
+    showMovie: function (movie) {
+      this.currentMovie = movie;
+      document.querySelector("#movie-details").showModal();
     },
   },
 };
