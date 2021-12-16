@@ -1,0 +1,31 @@
+<template>
+  <div class="list">
+    <div v-for="list in lists" v-bind:key="list.id">
+      <i>{{ list }}</i>
+    </div>
+  </div>
+</template>
+
+<script>
+import axios from "axios";
+
+export default {
+  data: function () {
+    return {
+      list: [],
+      lists: [],
+    };
+  },
+  created: function () {
+    this.indexLists();
+  },
+  methods: {
+    indexLists: function () {
+      axios.get("/lists").then((response) => {
+        this.lists = response.data;
+        console.log("list", response.data);
+      });
+    },
+  },
+};
+</script>
