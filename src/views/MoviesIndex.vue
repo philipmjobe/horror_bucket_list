@@ -1,12 +1,19 @@
 <template>
-  <div class="home">
-    <h1>Welcome To Your Horror Movie Bucket List</h1>
-    <!-- <div v-for="movie in movies" v-bind:key="movie.id">
+  <div class="movies-index">
+    <h1>All Movies</h1>
+    <div v-for="movie in movies" v-bind:key="movie.id">
       <h2>{{ movie.name }}</h2>
       <img v-bind:src="movie.box_art" v-bind:alt="movie.name" />
-    </div> -->
+    </div>
   </div>
 </template>
+
+<style>
+img {
+  height: 400px;
+  width: 300px;
+}
+</style>
 
 <script>
 import axios from "axios";
