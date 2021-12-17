@@ -3,6 +3,7 @@
     <h2>{{ movie.name }}</h2>
     <img v-bind:src="movie.box_art" v-bind:alt="movie.name" />
     <p>{{ movie.description }}</p>
+    <p>{{ movie.sub_genre }}</p>
     <router-link to="/movies">Back to All Movies</router-link>
   </div>
 </template>
