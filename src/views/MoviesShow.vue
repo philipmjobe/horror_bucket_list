@@ -4,12 +4,9 @@
     <img v-bind:src="movie.box_art" v-bind:alt="movie.name" />
     <p>{{ movie.description }}</p>
     <p>{{ movie.sub_genre }}</p>
-    <p>Movie Id: {{ movie.id }}</p>
-    <form v-on:submit.prevent="addMovie()">
-      <input type="text" v-model="newListCategory" />
-      <button type="submit">Add To Watchlist</button>
-    </form>
-    <!-- <button v-on:click="addMovie()">Add To List</button> -->
+    <input type="text" v-model="newListCategory" />
+    <button v-on:click="addMovie()">Add To Watchlist</button>
+    <br />
     <br />
     <router-link to="/movies">Back to All Movies</router-link>
   </div>
@@ -39,7 +36,8 @@ export default {
         .post("/lists", params)
         .then((response) => {
           console.log("added to list", response);
-          this.$router.push("/lists");
+          this.$router.push("/list");
+          location.reload();
         })
         .catch((error) => {
           this.status = error.response.status;
