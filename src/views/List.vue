@@ -1,7 +1,9 @@
 <template>
   <div class="list">
     <div v-for="list in lists" v-bind:key="list.id">
-      <i>{{ list }}</i>
+      <img :src="`${list.movie.box_art}`" />
+      <br />
+      <i>{{ list.category }}</i>
     </div>
   </div>
 </template>
