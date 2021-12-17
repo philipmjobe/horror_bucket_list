@@ -4,6 +4,7 @@
     <img v-bind:src="movie.box_art" v-bind:alt="movie.name" />
     <p>{{ movie.description }}</p>
     <p>{{ movie.sub_genre }}</p>
+    <button>Add To Watchlist</button>
     <router-link to="/movies">Back to All Movies</router-link>
   </div>
 </template>
