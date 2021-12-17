@@ -4,6 +4,7 @@
     <div v-for="movie in movies" v-bind:key="movie.id">
       <h2>{{ movie.name }}</h2>
       <img v-bind:src="movie.box_art" v-bind:alt="movie.name" />
+      <br />
       <router-link v-bind:to="`/movies/${movie.id}`">More Info</router-link>
     </div>
   </div>

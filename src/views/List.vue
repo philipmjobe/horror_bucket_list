@@ -28,6 +28,11 @@ export default {
         console.log("list", response.data);
       });
     },
+    addMovie: function () {
+      axios.post("/lists", this.movie).then(() => {
+        this.$router.push("/lists");
+      });
+    },
   },
 };
 </script>
