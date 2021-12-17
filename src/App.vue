@@ -13,7 +13,7 @@
       |
       <router-link to="/movies">All Movies</router-link>
       |
-      <!-- <router-link to="/lists/new">Make A New List</router-link> -->
+      <router-link to="/list">Watchlist</router-link>
     </div>
     <router-view />
   </div>
