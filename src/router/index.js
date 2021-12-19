@@ -7,6 +7,7 @@ import Logout from "../views/Logout.vue";
 import MoviesIndex from "../views/MoviesIndex.vue";
 import MoviesShow from "../views/MoviesShow.vue";
 import List from "../views/List";
+// import Vue2Filters from "vue2-filters";
 Vue.use(VueRouter);
 
 const routes = [
