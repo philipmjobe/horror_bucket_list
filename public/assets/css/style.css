@@ -824,12 +824,12 @@ section {
 .portfolio .portfolio-wrap .portfolio-links a {
   color: #fff;
   margin: 0 5px 0 0;
-  font-size: 28px;
+  font-size: 14px;
   display: inline-block;
   transition: 0.3s;
 }
 .portfolio .portfolio-wrap .portfolio-links a:hover {
-  color: #8ed851;
+  color: #0e0100;
 }
 .portfolio .portfolio-wrap:hover::before {
   opacity: 1;

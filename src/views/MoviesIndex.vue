@@ -18,19 +18,41 @@
       <button v-on:click="serSortAttribute('genre')">Sort By Genre</button>
     </div>
     <h1>All Movies</h1>
-    <div v-for="movie in movies" v-bind:key="movie.id">
+    <!-- <div v-for="movie in movies" v-bind:key="movie.id">
       <h2>{{ movie.name }}</h2>
       <img v-bind:src="movie.box_art" v-bind:alt="movie.name" />
-      <br />
-      <router-link v-bind:to="`/movies/${movie.id}`">More Info</router-link>
-    </div>
+      -->
+    <!-- <br />
+    </div>  -->
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <div v-for="movie in movies" v-bind:key="movie.id">
+          <!-- <router-link v-bind:to="`/movies/${movie.id}`">More Info</router-link> -->
+          <div class="row portfolio-container">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <img v-bind:src="movie.box_art" v-bind:alt="movie.name" />
+                <div class="portfolio-info">
+                  <h4>{{ movie.name }}</h4>
+                  <p></p>
+                  <div class="portfolio-links">
+                    <router-link v-bind:to="`/movies/${movie.id}`">More Info</router-link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
 <style>
 img {
   height: 400px;
-  width: 300px;
+  width: 356px;
 }
 </style>
 
