@@ -1,5 +1,10 @@
 <template>
   <div class="list">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
     <div v-for="list in lists" v-bind:key="list.id">
       <img :src="`${list.movie.box_art}`" />
       <br />
@@ -8,6 +13,11 @@
   </div>
 </template>
 
+<style>
+.list {
+  text-align: center;
+}
+</style>
 <script>
 import axios from "axios";
 

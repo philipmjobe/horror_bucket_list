@@ -15,6 +15,10 @@
 </template>
 
 <style>
+.background {
+  background-image: url("https://st2.depositphotos.com/1004430/7169/v/600/depositphotos_71697107-stock-illustration-skull-pattern.jpg");
+}
+
 .center {
   display: block;
   margin-left: auto;
