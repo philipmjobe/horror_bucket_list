@@ -1,7 +1,16 @@
 <template>
   <div class="movies-show">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
     <h2>{{ movie.name }}</h2>
-    <img v-bind:src="movie.box_art" v-bind:alt="movie.name" />
+    <img v-bind:src="movie.box_art" v-bind:alt="movie.name" class="center" />
     <p>{{ movie.description }}</p>
     <p>{{ movie.sub_genre }}</p>
     <input type="text" v-model="newListCategory" />
@@ -9,8 +18,35 @@
     <br />
     <br />
     <router-link to="/movies">Back to All Movies</router-link>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
   </div>
 </template>
+<style>
+img {
+  height: 400px;
+  width: 356px;
+}
+h2 {
+  color: white;
+  text-align: center;
+}
+p {
+  color: white;
+  text-align: center;
+}
+</style>
 
 <script>
 import axios from "axios";

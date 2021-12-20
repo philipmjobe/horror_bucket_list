@@ -2,8 +2,13 @@
   <div class="background">
     <div class="movies-index">
       <div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <h1>All Movies</h1>
-        Search By Title:
+        <b>Search By Title:</b>
         <input type="text" v-model="titleFilter" list="titles" />
         <datalist id="titles">
           <option v-for="movie in movies" :key="movie.id">{{ movie.name }}</option>
@@ -31,16 +36,18 @@
       <div class="background">
         <section id="portfolio" class="portfolio">
           <div class="container">
-            <div v-for="movie in movies" v-bind:key="movie.id">
-              <div class="row portfolio-container">
-                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                  <div class="portfolio-wrap">
-                    <img v-bind:src="movie.box_art" v-bind:alt="movie.name" />
-                    <div class="portfolio-info">
-                      <h4>{{ movie.name }}</h4>
-                      <p></p>
-                      <div class="portfolio-links">
-                        <router-link v-bind:to="`/movies/${movie.id}`">More Info</router-link>
+            <div class="row">
+              <div v-for="movie in movies" v-bind:key="movie.id">
+                <div class="row portfolio-container">
+                  <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                    <div class="portfolio-wrap">
+                      <img v-bind:src="movie.box_art" v-bind:alt="movie.name" />
+                      <div class="portfolio-info">
+                        <h4>{{ movie.name }}</h4>
+                        <p></p>
+                        <div class="portfolio-links">
+                          <router-link v-bind:to="`/movies/${movie.id}`">More Info</router-link>
+                        </div>
                       </div>
                     </div>
                   </div>
