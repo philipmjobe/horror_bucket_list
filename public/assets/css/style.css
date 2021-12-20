@@ -11,7 +11,11 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
-  background-image: url(pexels-fireberrytech-2848647.jpg;);
+  background-image: url("https://images.pexels.com/photos/2848647/pexels-photo-2848647.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
 }
 
 a {

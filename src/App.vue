@@ -10,37 +10,32 @@
         <nav id="navbar" class="navbar">
           <ul>
             <li><a class="nav-link to" href="/">Home</a></li>
-
             <li><a class="nav-link to" href="/movies">Movies</a></li>
 
             <li class="dropdown">
               <a href="#">
-                <span>Drop Down</span>
+                <span>Your List</span>
                 <i class="bi bi-chevron-down"></i>
               </a>
               <ul>
-                <li><a href="#">Drop Down 1</a></li>
+                <li><a href="/list">Not Watched</a></li>
                 <li class="dropdown">
-                  <a href="#">
-                    <span>Deep Drop Down</span>
+                  <a href="/list">
+                    <span>Watched</span>
                     <i class="bi bi-chevron-right"></i>
                   </a>
                   <ul>
-                    <li><a href="#">Deep Drop Down 1</a></li>
-                    <li><a href="#">Deep Drop Down 2</a></li>
-                    <li><a href="#">Deep Drop Down 3</a></li>
-                    <li><a href="#">Deep Drop Down 4</a></li>
-                    <li><a href="#">Deep Drop Down 5</a></li>
+                    <li><a href="/list">Loved It!</a></li>
+                    <li><a href="/list">Hated It!</a></li>
                   </ul>
                 </li>
-                <li><a href="#">Drop Down 2</a></li>
-                <li><a href="#">Drop Down 3</a></li>
-                <li><a href="#">Drop Down 4</a></li>
               </ul>
             </li>
 
             <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
-            <li><a class="getstarted scrollto" href="/signup">Get Started</a></li>
+            <li><a class="nav-link to" href="/login">Sign In</a></li>
+            <li><a class="nav-link to" href="/logout">Log Out</a></li>
+            <li><a class="getstarted scrollto" href="/signup">Sign Up</a></li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
@@ -48,7 +43,17 @@
       </div>
     </header>
     <!-- End Header -->
-
+    <body>
+      <!-- Background image -->
+      <!-- <div
+        class="bg-image"
+        style="
+          background-image: url('https://images.pexels.com/photos/2848647/pexels-photo-2848647.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
+          height: 300vh;
+        "
+      ></div> -->
+      <!-- Background image -->
+    </body>
     <router-view />
 
     <footer id="footer">
@@ -169,7 +174,12 @@
   </div>
 </template>
 
-<style></style>
+<style>
+.background {
+  background-image: url("https://st2.depositphotos.com/1004430/7169/v/600/depositphotos_71697107-stock-illustration-skull-pattern.jpg");
+  background-size: 100%;
+}
+</style>
 
 <script>
 export default {

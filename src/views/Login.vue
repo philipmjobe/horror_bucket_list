@@ -1,5 +1,19 @@
 <template>
   <div class="login">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
     <form v-on:submit.prevent="submit()">
       <h1>Login</h1>
       <ul>
@@ -15,8 +29,29 @@
       </div>
       <input type="submit" value="Submit" />
     </form>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
   </div>
 </template>
+
+<style>
+form {
+  text-align: center;
+}
+</style>
 
 <script>
 import axios from "axios";
