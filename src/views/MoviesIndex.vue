@@ -1,7 +1,7 @@
 <template>
-  <main id="main">
-    <div class="background">
-      <div class="movies-index">
+  <div class="movies-index">
+    <main id="main">
+      <div>
         <div>
           <br />
           <br />
@@ -60,8 +60,8 @@
         </section>
         <!-- End Movie Section -->
       </div>
-    </div>
-  </main>
+    </main>
+  </div>
 </template>
 
 <script>

@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="background">
+    <div>
       <body>
         <br />
         <br />
@@ -28,10 +28,7 @@ h1 {
   text-align: center;
   color: white;
 }
-.background {
-  background-image: url("https://st2.depositphotos.com/1004430/7169/v/600/depositphotos_71697107-stock-illustration-skull-pattern.jpg");
-  background-size: 100%;
-}
+
 .center {
   display: block;
   margin-left: auto;
