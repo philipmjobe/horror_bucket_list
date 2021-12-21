@@ -16,6 +16,7 @@
 <style>
 .list {
   text-align: center;
+  color: white;
 }
 </style>
 <script>
