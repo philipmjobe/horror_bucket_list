@@ -10,9 +10,9 @@
     <br />
     <br />
     <h2>{{ movie.name }}</h2>
-    <img v-bind:src="movie.box_art" v-bind:alt="movie.name" class="center" />
-    <p>{{ movie.description }}</p>
-    <p>{{ movie.sub_genre }}</p>
+    <p style="text-align: center"><img v-bind:src="movie.box_art" v-bind:alt="movie.name" class="thing" /></p>
+    <p>Plot: {{ movie.description }}</p>
+    <p>Sub Genre: {{ movie.sub_genre }}</p>
     <input type="text" v-model="newListCategory" />
     <button v-on:click="addMovie()">Add To Watchlist</button>
     <br />
@@ -34,9 +34,9 @@
   </div>
 </template>
 <style>
-img {
-  height: 400px;
-  width: 356px;
+.thing {
+  height: 600px;
+  width: 400px;
 }
 h2 {
   color: white;

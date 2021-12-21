@@ -63,6 +63,12 @@
     </main>
   </div>
 </template>
+<style>
+img {
+  height: 600px;
+  width: 420px;
+}
+</style>
 
 <script>
 import axios from "axios";
