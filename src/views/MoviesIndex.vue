@@ -8,24 +8,22 @@
           <br />
           <br />
           <br />
-          <h1>All Movies</h1>
-          <b>Search By Title:</b>
-          <input type="text" v-model="titleFilter" list="titles" />
-          <datalist id="titles">
+          <h1>
+            <b>Search By Title:</b>
+          </h1>
+          <input type="text" v-model="nameFilter" list="names" class="center-this-regular" />
+          <datalist id="names">
             <option v-for="movie in movies" :key="movie.id">{{ movie.name }}</option>
           </datalist>
+          <!-- <input type="text" v-model="genreFilter" list="sub_genres" />
+          <datalist id="sub_genres">
+            <option v-for="movie in movies" :key="movie.id">{{ movie.sub_genre }}</option>
+          </datalist> -->
         </div>
 
-        <div
-          v-for="movie in orderBy(filterBy(movies, titleFilter, sub_genre, 'title', 'sub_genre'), sortAttribute)"
-          v-on:click="currentMovie = movie"
-          v-bind:class="{ selected: movie === currentMovie }"
-          :key="movie.id"
-        ></div>
-
         <div>
-          <button v-on:click="setSortAttribute('name')">Sort By Title</button>
-          <button v-on:click="setSortAttribute('sub_genre')">Sort By Genre</button>
+          <button class="center-this-too" v-on:click="setSortAttribute('name')">Sort By Title</button>
+          <button class="center-this-too" v-on:click="setSortAttribute('sub_genre')">Sort By Genre</button>
         </div>
 
         <!-- ======= Movie Section ======= -->
@@ -35,8 +33,10 @@
               <div
                 class="col-lg-4 col-md-6 portfolio-item filter-app"
                 data-layoutmode="fitRows"
-                v-for="movie in movies"
-                v-bind:key="movie.id"
+                v-for="movie in orderBy(filterBy(movies, nameFilter, genreFilter, 'name', 'sub_genre'), sortAttribute)"
+                v-on:click="currentMovie = movie"
+                v-bind:class="{ selected: movie === currentMovie }"
+                :key="movie.id"
               >
                 <div class="portfolio-wrap">
                   <img v-bind:src="movie.box_art" v-bind:alt="movie.name" />
@@ -58,15 +58,25 @@
             </div>
           </div>
         </section>
+
         <!-- End Movie Section -->
       </div>
     </main>
   </div>
 </template>
 <style>
+.center-this-regular {
+  width: 60%;
+  transform: translate(30%);
+}
+.center-this-too {
+  width: 20%;
+  transform: translate(138%);
+}
+
 img {
   height: 600px;
-  width: 420px;
+  width: 360px;
 }
 </style>
 
@@ -80,8 +90,9 @@ export default {
       movies: [],
       sub_genre: [],
       currentMovie: {},
-      titleFilter: "",
-      sortAttribute: "title, genre",
+      nameFilter: "",
+      genreFilter: "",
+      sortAttribute: "name, sub_genre",
     };
   },
   created: function () {
