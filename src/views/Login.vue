@@ -31,7 +31,7 @@
     </form>
     <br />
     <div class="center-this-five">
-      <router-link v-bind:to="`/signup`">Not A Memeber Sign Up Here!</router-link>
+      <router-link v-bind:to="`/signup`"><b>Not A Memeber Sign Up Here!</b></router-link>
     </div>
     <br />
     <br />

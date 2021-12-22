@@ -15,10 +15,6 @@
           <datalist id="names">
             <option v-for="movie in movies" :key="movie.id">{{ movie.name }}</option>
           </datalist>
-          <!-- <input type="text" v-model="genreFilter" list="sub_genres" />
-          <datalist id="sub_genres">
-            <option v-for="movie in movies" :key="movie.id">{{ movie.sub_genre }}</option>
-          </datalist> -->
         </div>
 
         <div>
@@ -48,7 +44,6 @@
                     </div>
                   </div>
                 </div>
-                <!-- <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="" /> -->
                 <div class="portfolio-info">
                   <div class="portfolio-links">
                     <router-link v-bind:to="`/movies/${movie.id}`"></router-link>

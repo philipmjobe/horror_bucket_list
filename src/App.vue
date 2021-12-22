@@ -56,7 +56,7 @@
           <div class="row">
             <div class="col-lg-3 col-md-6">
               <div class="footer-info">
-                <h3>Groovin</h3>
+                <h3>Horror Is Life</h3>
                 <p>
                   A108 Adam Street
                   <br />

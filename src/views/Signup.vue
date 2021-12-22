@@ -1,5 +1,17 @@
 <template>
   <div class="signup">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
     <form v-on:submit.prevent="submit()">
       <h1>Signup</h1>
       <ul>
@@ -23,8 +35,25 @@
       </div>
       <input type="submit" value="Submit" />
     </form>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
   </div>
 </template>
+
+<style>
+label {
+  color: white;
+}
+</style>
 
 <script>
 import axios from "axios";
