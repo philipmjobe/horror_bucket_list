@@ -8,8 +8,9 @@
     <p style="text-align: center"><img v-bind:src="movie.box_art" v-bind:alt="movie.name" class="thing" /></p>
     <p>Plot: {{ movie.description }}</p>
     <p>Sub Genre: {{ movie.sub_genre }}</p>
-    <input type="text" v-model="newListCategory" />
-    <button v-on:click="addMovie()">Add To Watchlist</button>
+    <p>Please Enter Watched or Not Watched</p>
+    <input class="center-this-three" type="text" v-model="newListCategory" />
+    <button class="center-this-four" v-on:click="addMovie()">Add To Watchlist</button>
     <br />
     <br />
     <router-link to="/movies">Back to All Movies</router-link>
@@ -29,6 +30,14 @@
   </div>
 </template>
 <style>
+.center-this-four {
+  width: 20%;
+  transform: translate(140%);
+}
+.center-this-three {
+  width: 40%;
+  transform: translate(70%);
+}
 .thing {
   height: 600px;
   width: 400px;

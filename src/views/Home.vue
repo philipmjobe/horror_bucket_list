@@ -33,7 +33,7 @@ h1 {
   margin-right: auto;
   width: 50%;
   height: 600px;
-  color: white;
+  color: rgb(224, 245, 105);
 }
 </style>
 
