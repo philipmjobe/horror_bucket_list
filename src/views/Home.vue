@@ -9,7 +9,7 @@
         <h1>Click To Sign In</h1>
         <br />
         <br />
-        <a href="/login"><img src="/assets/img/skull2.png" alt="" class="center" /></a>
+        <a href="/login"><img src="/assets/img/skull3.png" alt="" class="center" /></a>
         <br />
         <br />
         <br />
