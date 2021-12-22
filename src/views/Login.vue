@@ -30,6 +30,9 @@
       <input type="submit" value="Submit" />
     </form>
     <br />
+    <div class="center-this-five">
+      <router-link v-bind:to="`/signup`">Not A Memeber Sign Up Here!</router-link>
+    </div>
     <br />
     <br />
     <br />
@@ -48,6 +51,9 @@
 </template>
 
 <style>
+.center-this-five {
+  text-align: center;
+}
 form {
   text-align: center;
 }
