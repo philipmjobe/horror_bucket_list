@@ -6,7 +6,8 @@
         <br />
         <br />
         <br />
-        <h1>Click To Sign In</h1>
+        <h1>Welcome To Your Worst Nightmare!</h1>
+        <h2>Click The Skull To Sign In</h2>
         <br />
         <br />
         <a href="/login"><img src="/assets/img/skull3.png" alt="" class="center" /></a>
@@ -24,7 +25,7 @@
 <style>
 h1 {
   text-align: center;
-  color: white;
+  color: rgb(57, 221, 16);
 }
 
 .center {
