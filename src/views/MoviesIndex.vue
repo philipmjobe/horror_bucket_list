@@ -40,6 +40,9 @@
                     <h4>{{ movie.name }}</h4>
                     <p></p>
                     <div class="portfolio-links">
+                      <p>
+                        <b>{{ movie.sub_genre }}</b>
+                      </p>
                       <router-link v-bind:to="`/movies/${movie.id}`">More Info</router-link>
                     </div>
                   </div>
