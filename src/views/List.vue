@@ -5,11 +5,18 @@
     <br />
     <br />
     <br />
-    <div v-for="list in lists" v-bind:key="list.id">
-      <img :src="`${list.movie.box_art}`" />
-      <br />
-      <i>{{ list.category }}</i>
-    </div>
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <div class="row portfolio-container">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-layoutmode="fitRows"
+            <div class="portfolio-wrap" v-bind:key="list.id" v-bind:src="$list.movie.box_art" v-bind:alt="movie.name" 
+            v-for="list in lists" /></div>
+          </div>
+        </div>
+        <br />
+        <i>{{ list.category }}</i>
+      </div>
+    </section>
   </div>
 </template>
 
