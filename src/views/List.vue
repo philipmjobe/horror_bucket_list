@@ -8,9 +8,10 @@
     <section id="portfolio" class="portfolio">
       <div class="container">
         <div class="row portfolio-container">
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-layoutmode="fitRows"
-            <div class="portfolio-wrap" v-bind:key="list.id" v-bind:src="$list.movie.box_art" v-bind:alt="movie.name" 
-            v-for="list in lists" /></div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-layoutmode="fitRows" />
+          <div class="portfolio-wrap">
+            <img v-bind:src="movie.box_art" v-bind:alt="movie.name" v-for="list in lists" v-bind:key="list.id" />
+            <div class="portfolio-info"></div>
           </div>
         </div>
         <br />
