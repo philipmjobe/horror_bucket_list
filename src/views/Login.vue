@@ -32,6 +32,10 @@
     <br />
     <div class="center-this-five">
       <router-link v-bind:to="`/signup`"><b>Not A Memeber Sign Up Here!</b></router-link>
+      <br />
+      <br />
+      <br />
+      <h3>To Demo Use email: phil@test.com, password: password</h3>
     </div>
     <br />
     <br />
@@ -51,6 +55,9 @@
 </template>
 
 <style>
+h3 {
+  color: rgb(255, 251, 251);
+}
 .center-this-five {
   text-align: center;
 }
