@@ -15,7 +15,7 @@
               <i>{{ list.category }}</i>
               <div class="portfolio-info">
                 <div class="portfolio-links">
-                  <router-link v-bind:to="`/movies-update/${movie.id}`">Update Status</router-link>
+                  <router-link v-bind:to="`/movies/${movie.id}`">Update Status</router-link>
                 </div>
               </div>
             </div>
@@ -60,11 +60,6 @@ export default {
     addMovie: function () {
       axios.post("/lists", this.movie).then(() => {
         this.$router.push("/lists");
-      });
-    },
-    updateMovie: function () {
-      axios.patch("/movies", this.movie).then(() => {
-        this.$router.push("/movies-update");
       });
     },
   },
