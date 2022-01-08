@@ -15,7 +15,10 @@
               <i>{{ list.category }}</i>
               <div class="portfolio-info">
                 <div class="portfolio-links">
-                  <router-link v-bind:to="`/movies/${movie.id}`">Update Status</router-link>
+                  <router-link v-bind:to="`/loved-it`">Loved It</router-link>
+                  <br />
+                  <br />
+                  <router-link v-bind:to="`/hated-it`">Hated It</router-link>
                 </div>
               </div>
             </div>
