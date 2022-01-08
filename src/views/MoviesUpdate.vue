@@ -1,6 +1,8 @@
 <template>
   <div class="movies-update">
-    <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
+    <ul>
+      <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
+    </ul>
     <h2>{{ movie.name }}</h2>
     <p style="text-align: center"><img v-bind:src="movie.box_art" v-bind:alt="movie.name" class="thing" /></p>
   </div>
@@ -14,11 +16,12 @@ export default {
     return {
       currentMovieParams: {},
       errors: [],
+      movies: [],
     };
   },
   created: function () {
-    axios.get(`/movies/${this.$route.params.id}`).then((response) => {
-      console.log("Movie Info:", response.data);
+    axios.get(`/movies/ + ${this.$route.params.id}`).then((response) => {
+      console.log("movies update:", response.data);
       this.currentMovieParams = response.data;
     });
   },
@@ -29,7 +32,7 @@ export default {
       axios
         .patch(`/movies/${this.$route.params.id}`, this.currentMovieParams)
         .then((response) => {
-          this.$router.push(`/movies/${response.data.id}`);
+          this.$router.push(`/movies-update/${response.data.id}`);
         })
         .catch((error) => console.log(error.response));
     },

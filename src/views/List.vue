@@ -14,8 +14,9 @@
               <br />
               <i>{{ list.category }}</i>
               <div class="portfolio-info">
-                <div class="portfolio-links"></div>
-                <router-link v-bind:to="`/movies-update/${movie.id}`">Update Status</router-link>
+                <div class="portfolio-links">
+                  <router-link v-bind:to="`/movies-update/${movie.id}`">Update Status</router-link>
+                </div>
               </div>
             </div>
           </div>
