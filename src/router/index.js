@@ -7,7 +7,8 @@ import Logout from "../views/Logout.vue";
 import MoviesIndex from "../views/MoviesIndex.vue";
 import MoviesShow from "../views/MoviesShow.vue";
 import List from "../views/List";
-import MoviesUpdate from "../views/MoviesUpdate.vue";
+import LovedIt from "../views/LovedIt.vue";
+import HatedIt from "../views/HatedIt.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -22,7 +23,8 @@ const routes = [
   { path: "/movies", name: "movies-index", component: MoviesIndex },
   { path: "/movies/:id", name: "movies-show", component: MoviesShow },
   { path: "/list", name: "list", component: List },
-  { path: "/movies/:id", name: "movies-update", component: MoviesUpdate },
+  { path: "/lovedit", name: "loved-it", component: LovedIt },
+  { path: "/hatedit", name: "hated-it", component: HatedIt },
 
   {
     path: "/about",
