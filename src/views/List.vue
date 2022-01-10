@@ -12,10 +12,10 @@
             <div class="portfolio-wrap">
               <img :src="`${list.movie.box_art}`" />
               <br />
-              <i>{{ list.category }}</i>
+
               <div class="portfolio-info">
                 <div class="portfolio-links">
-                  <router-link v-bind:to="`/loved-it`">Loved It</router-link>
+                  <router-link to="/loved-it">Loved It</router-link>
                   <br />
                   <br />
                   <router-link v-bind:to="`/hated-it`">Hated It</router-link>

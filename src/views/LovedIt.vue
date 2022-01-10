@@ -3,7 +3,7 @@
     <section id="portfolio" class="portfolio">
       <div class="container">
         <div class="row portfolio-container">
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app" v-for="lovedit in lovedits" v-bind:key="lovedit.id">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app" v-for="movie in movies" v-bind:key="movie.id">
             <div class="portfolio-wrap">
               <img :src="`${movie.box_art}`" />
               <br />
@@ -25,7 +25,7 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      movie: {},
+      movies: [],
     };
   },
   created: function () {
