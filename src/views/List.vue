@@ -15,7 +15,7 @@
 
               <div class="portfolio-info">
                 <div class="portfolio-links">
-                  <router-link to="/loved-it">Loved It</router-link>
+                  <button v-on:click="lovedIt(list)">Loved It</button>
                   <br />
                   <br />
                   <router-link v-bind:to="`/hated-it`">Hated It</router-link>
@@ -36,7 +36,7 @@
 }
 img {
   height: 624px;
-  width: 416px;
+  width: 370px;
 }
 </style>
 <script>
@@ -45,9 +45,10 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      list: [],
+      list: {},
       lists: [],
       movie: [],
+      currentUser: localStorage.getItem("user_id"),
     };
   },
   created: function () {
@@ -63,6 +64,13 @@ export default {
     addMovie: function () {
       axios.post("/lists", this.movie).then(() => {
         this.$router.push("/lists");
+      });
+    },
+    lovedIt: function (list) {
+      this.list = list;
+      axios.post("/lovedits", { user_id: this.currentUser.id, movie_id: this.list.movie_id }).then(() => {
+        console.log("yo");
+        this.$router.push("/lovedits");
       });
     },
   },

@@ -26,18 +26,19 @@ export default {
   data: function () {
     return {
       movies: [],
+      lovedit: {},
     };
   },
   created: function () {
-    axios.get("/movies/" + this.$route.params.id).then((response) => {
+    axios.get("/movies/").then((response) => {
       console.log("loved it", response);
-      this.movie = response.data;
+      this.movies = response.data;
     });
   },
   methods: {
     addMovie: function () {
       var params = { movie_id: `${this.$route.params.id}` };
-      axios.post("/movies", params).then((response) => {
+      axios.post("/loved-it", params).then((response) => {
         console.log("added to list", response);
         this.$router.push("/loved-it");
         location.reload();
