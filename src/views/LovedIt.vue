@@ -1,5 +1,20 @@
 <template>
   <div class="loved-it">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <p>Loved It List</p>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
     <section id="portfolio" class="portfolio">
       <div class="container">
         <div class="row portfolio-container">
@@ -7,7 +22,6 @@
             <div class="portfolio-wrap">
               <img :src="`${lovedit.movie.box_art}`" />
               <br />
-
               <div class="portfolio-info">
                 <div class="portfolio-links"></div>
               </div>
@@ -19,6 +33,11 @@
   </div>
 </template>
 
+<style>
+p {
+  font-size: 250%;
+}
+</style>
 <script>
 import axios from "axios";
 
