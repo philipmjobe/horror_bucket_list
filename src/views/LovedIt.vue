@@ -3,9 +3,9 @@
     <section id="portfolio" class="portfolio">
       <div class="container">
         <div class="row portfolio-container">
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app" v-for="movie in movies" v-bind:key="movie.id">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app" v-for="lovedit in lovedits" v-bind:key="lovedit.id">
             <div class="portfolio-wrap">
-              <img :src="`${movie.box_art}`" />
+              <img :src="`${lovedit.movie.box_art}`" />
               <br />
 
               <div class="portfolio-info">
@@ -25,25 +25,25 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      movies: [],
-      lovedit: {},
+      movie: [],
+      lovedits: {},
     };
   },
   created: function () {
-    axios.get("/movies/").then((response) => {
+    axios.get("/lovedits/").then((response) => {
       console.log("loved it", response);
-      this.movies = response.data;
+      this.lovedits = response.data;
     });
   },
-  methods: {
-    addMovie: function () {
-      var params = { movie_id: `${this.$route.params.id}` };
-      axios.post("/loved-it", params).then((response) => {
-        console.log("added to list", response);
-        this.$router.push("/loved-it");
-        location.reload();
-      });
-    },
-  },
+  // methods: {
+  //   addMovie: function () {
+  //     var params = { movie_id: `${this.$route.params.id}` };
+  //     axios.post("/loved-it", params).then((response) => {
+  //       console.log("added to list", response);
+  //       this.$router.push("/loved-it");
+  //       location.reload();
+  //     });
+  //   },
+  // },
 };
 </script>

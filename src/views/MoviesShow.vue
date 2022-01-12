@@ -8,8 +8,8 @@
     <p style="text-align: center"><img v-bind:src="movie.box_art" v-bind:alt="movie.name" class="thing" /></p>
     <p>Plot: {{ movie.description }}</p>
     <p>Sub Genre: {{ movie.sub_genre }}</p>
-    <p>Please Enter Not Watched Loved It or Hated It</p>
-    <input class="center-this-three" type="text" v-model="newListCategory" />
+    <!-- <p>Please Enter Not Watched Loved It or Hated It</p> -->
+    <!-- <input class="center-this-three" type="text" v-model="newListCategory" /> -->
     <button class="center-this-four" v-on:click="addMovie()">Add To Watchlist</button>
     <br />
     <br />
@@ -37,7 +37,7 @@
 }
 .center-this-four {
   width: 20%;
-  transform: translate(140%);
+  transform: translate(200%);
 }
 .center-this-three {
   width: 40%;

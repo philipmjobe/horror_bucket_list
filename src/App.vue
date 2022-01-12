@@ -25,7 +25,7 @@
                     <i class="bi bi-chevron-right"></i>
                   </a>
                   <ul>
-                    <li><a href="/list">Loved It!</a></li>
+                    <li><a href="/lovedit">Loved It!</a></li>
                     <li><a href="/list">Hated It!</a></li>
                   </ul>
                 </li>
