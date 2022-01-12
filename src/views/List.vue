@@ -18,7 +18,7 @@
                   <button v-on:click="lovedIt(list)">Loved It</button>
                   <br />
                   <br />
-                  <router-link v-bind:to="`/hated-it`">Hated It</router-link>
+                  <button v-on:click="hatedIt(list)">Hated It</button>
                 </div>
               </div>
             </div>
@@ -76,6 +76,18 @@ export default {
         .then(() => {
           console.log("yo");
           this.$router.push("/lovedits");
+        });
+    },
+    hatedIt: function (list) {
+      this.list = list;
+      axios
+        .post("/hatedits", {
+          user_id: this.currentUser.id,
+          movie_id: this.list.movie_id,
+        })
+        .then(() => {
+          console.log("sup");
+          this.$router.push("/hatedits");
         });
     },
   },

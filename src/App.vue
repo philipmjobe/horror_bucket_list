@@ -26,7 +26,7 @@
                   </a>
                   <ul>
                     <li><a href="/lovedit">Loved It!</a></li>
-                    <li><a href="/list">Hated It!</a></li>
+                    <li><a href="/hatedit">Hated It!</a></li>
                   </ul>
                 </li>
               </ul>
