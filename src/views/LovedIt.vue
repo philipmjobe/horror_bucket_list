@@ -54,15 +54,15 @@ export default {
       this.lovedits = response.data;
     });
   },
-  // methods: {
-  //   addMovie: function () {
-  //     var params = { movie_id: `${this.$route.params.id}` };
-  //     axios.post("/loved-it", params).then((response) => {
-  //       console.log("added to list", response);
-  //       this.$router.push("/loved-it");
-  //       location.reload();
-  //     });
-  //   },
-  // },
+  methods: {
+    addMovie: function () {
+      var params = { movie_id: `${this.$route.params.id}` };
+      axios.post("/lovedits", params).then((response) => {
+        console.log("added to list", response);
+        this.$router.push("/lovedits");
+        location.reload();
+      });
+    },
+  },
 };
 </script>

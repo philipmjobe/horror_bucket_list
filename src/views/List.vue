@@ -15,7 +15,8 @@
 
               <div class="portfolio-info">
                 <div class="portfolio-links">
-                  <button v-on:click="lovedIt(list)">Loved It</button>
+                  <button @click="lovedIt(list)">Loved It</button>
+
                   <br />
                   <br />
                   <button v-on:click="hatedIt(list)">Hated It</button>
