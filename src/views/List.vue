@@ -47,8 +47,8 @@ export default {
   data: function () {
     return {
       list: {},
-      lists: [],
-      movie: [],
+      lists: {},
+      movie: {},
       currentUser: localStorage.getItem("user_id"),
     };
   },
@@ -76,7 +76,8 @@ export default {
         })
         .then(() => {
           console.log("yo");
-          this.$router.push("/lovedits");
+          this.$router.push("/lovedit");
+          location.reload();
         });
     },
     hatedIt: function (list) {
@@ -88,7 +89,8 @@ export default {
         })
         .then(() => {
           console.log("sup");
-          this.$router.push("/hatedits");
+          this.$router.push("/hatedit");
+          location.reload();
         });
     },
   },
