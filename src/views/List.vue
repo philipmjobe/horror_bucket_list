@@ -15,7 +15,7 @@
 
               <div class="portfolio-info">
                 <div class="portfolio-links">
-                  <button @click="lovedIt(list)">Loved It</button>
+                  <button v-on:click="lovedIt(list)">Loved It</button>
 
                   <br />
                   <br />
@@ -46,10 +46,11 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      list: {},
+      list: [],
       lists: {},
-      movie: {},
+      movie: [],
       currentUser: localStorage.getItem("user_id"),
+      watched: false,
     };
   },
   created: function () {
@@ -77,6 +78,7 @@ export default {
         .then(() => {
           console.log("yo");
           this.$router.push("/lovedit");
+
           location.reload();
         });
     },
@@ -90,6 +92,7 @@ export default {
         .then(() => {
           console.log("sup");
           this.$router.push("/hatedit");
+
           location.reload();
         });
     },
