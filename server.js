@@ -6,5 +6,5 @@ app.use(serveStatic(path.join(__dirname, "dist")));
 const port = process.env.PORT || 3000;
 app.listen(port);
 
-"postinstall": "npm run build",
-"start": "node server.js"
+// "postinstall": "npm run build",
+// "start": "node server.js"
