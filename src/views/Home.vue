@@ -10,7 +10,7 @@
         <h2>Click The Skull To Sign In</h2>
         <br />
         <br />
-        <a href="/login"><img src="/assets/img/skull3.png" alt="" class="center" /></a>
+        <router-link :to="'/login'"><img src="/assets/img/skull3.png" alt="" class="center" /></router-link>
         <br />
         <br />
         <br />
