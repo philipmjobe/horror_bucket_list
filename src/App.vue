@@ -9,8 +9,10 @@
 
         <nav id="navbar" class="navbar">
           <ul>
-            <li><a class="nav-link to" href="/">Home</a></li>
-            <li><a class="nav-link to" href="/movies">Movies</a></li>
+            <router-link class="nav-link" :to="'/'">Home</router-link>
+            <li>
+              <router-link class="nav-link" :to="'/movies'">Movies</router-link>
+            </li>
 
             <li class="dropdown">
               <a href="#">
@@ -18,7 +20,7 @@
                 <i class="bi bi-chevron-down"></i>
               </a>
               <ul>
-                <li><a href="/list">Not Watched</a></li>
+                <router-link class="nav-link" :to="'/list'">Not Watched</router-link>
                 <li class="dropdown">
                   <a href="/list">
                     <span>Watched</span>
@@ -33,8 +35,8 @@
             </li>
 
             <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
-            <li><a class="nav-link to" href="/login">Sign In</a></li>
-            <li><a class="nav-link to" href="/logout">Log Out</a></li>
+            <router-link class="nav-link" :to="'/login'">Sign In</router-link>
+            <router-link class="nav-link" :to="'/logout'">Log Out</router-link>
             <li><a class="getstarted scrollto" href="/signup">Sign Up</a></li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
