@@ -4,7 +4,7 @@ import router from "./router";
 import axios from "axios";
 
 axios.defaults.baseURL =
-  process.env.NODE_ENV === "development" ? "https://git.heroku.com/horrormoviebucketlist.git" : "/";
+  process.env.NODE_ENV === "development" ? "http://localhost:3000" : "https://git.heroku.com/horrorbucketlist.git";
 
 var jwt = localStorage.getItem("jwt");
 if (jwt) {
