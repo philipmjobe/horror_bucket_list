@@ -3,7 +3,7 @@ import App from "./App.vue";
 import router from "./router";
 import axios from "axios";
 
-axios.defaults.baseURL = process.env.NODE_ENV === "development" ? "https://git.heroku.com/horrorbucketlist.git" : "/";
+axios.defaults.baseURL = process.env.NODE_ENV === "development" ? "https://horrorbucketlist.herokuapp.com" : "/";
 
 var jwt = localStorage.getItem("jwt");
 if (jwt) {
