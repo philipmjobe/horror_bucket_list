@@ -22,13 +22,13 @@
               <ul>
                 <router-link class="nav-link" :to="'/list'">Not Watched</router-link>
                 <li class="dropdown">
-                  <a href="/list">
+                  <router-link class="nav-link" :to="'/list'">
                     <span>Watched</span>
                     <i class="bi bi-chevron-right"></i>
-                  </a>
+                  </router-link>
                   <ul>
-                    <li><a href="/lovedit">Loved It!</a></li>
-                    <li><a href="/hatedit">Hated It!</a></li>
+                    <li><router-link class="nav-link" :to="'/lovedit'">Loved It!</router-link></li>
+                    <li><router-link class="nav-link" :to="'/hatedit'">Hated It!</router-link></li>
                   </ul>
                 </li>
               </ul>
