@@ -35,7 +35,7 @@
       <br />
       <br />
       <br />
-      <h3>To Demo Use email: phil@test.com, password: password</h3>
+      <h3>To Demo Use email: john@test.com, password: password</h3>
     </div>
     <br />
     <br />
