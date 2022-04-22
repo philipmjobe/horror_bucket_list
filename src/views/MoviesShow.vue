@@ -78,7 +78,7 @@ export default {
     addMovie: function () {
       var params = { movie_id: `${this.$route.params.id}`, category: this.newListCategory };
       axios
-        .post("https://fathomless-tundra-47766.herokuapp.com/lists", params)
+        .post("/lists", params)
         .then((response) => {
           console.log("added to list", response);
           this.$router.push("/list");
