@@ -58,20 +58,20 @@ export default {
   },
   methods: {
     indexLists: function () {
-      axios.get("/lists").then((response) => {
+      axios.get("https://fathomless-tundra-47766.herokuapp.com/lists").then((response) => {
         this.lists = response.data;
         console.log("list", response.data);
       });
     },
     addMovie: function () {
-      axios.post("/lists", this.movie).then(() => {
+      axios.post("https://fathomless-tundra-47766.herokuapp.com/lists", this.movie).then(() => {
         this.$router.push("/lists");
       });
     },
     lovedIt: function (list) {
       this.list = list;
       axios
-        .post("/lovedits", {
+        .post("https://fathomless-tundra-47766.herokuapp.com/lovedits", {
           user_id: this.currentUser.id,
           movie_id: this.list.movie_id,
         })
@@ -85,7 +85,7 @@ export default {
     hatedIt: function (list) {
       this.list = list;
       axios
-        .post("/hatedits", {
+        .post("https://fathomless-tundra-47766.herokuapp.com/hatedits", {
           user_id: this.currentUser.id,
           movie_id: this.list.movie_id,
         })

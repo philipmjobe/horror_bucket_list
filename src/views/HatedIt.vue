@@ -49,7 +49,7 @@ export default {
     };
   },
   created: function () {
-    axios.get("/hatedits/").then((response) => {
+    axios.get("https://fathomless-tundra-47766.herokuapp.com/hatedits/").then((response) => {
       console.log("hated it", response);
       this.hatedits = response.data;
     });

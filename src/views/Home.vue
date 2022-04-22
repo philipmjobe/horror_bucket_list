@@ -51,7 +51,7 @@ export default {
   },
   methods: {
     indexMovies: function () {
-      axios.get("/movies").then((response) => {
+      axios.get("https://fathomless-tundra-47766.herokuapp.com/movies").then((response) => {
         console.log("movies index", response);
         this.movies = response.data;
       });

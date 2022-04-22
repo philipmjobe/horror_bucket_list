@@ -49,7 +49,7 @@ export default {
     };
   },
   created: function () {
-    axios.get("/lovedits/").then((response) => {
+    axios.get("https://fathomless-tundra-47766.herokuapp.com/lovedits/").then((response) => {
       console.log("loved it", response);
       this.lovedits = response.data;
     });
@@ -57,7 +57,7 @@ export default {
   methods: {
     addMovie: function () {
       var params = { movie_id: `${this.$route.params.id}` };
-      axios.post("/lovedits", params).then((response) => {
+      axios.post("https://fathomless-tundra-47766.herokuapp.com/lovedits", params).then((response) => {
         console.log("added to list", response);
         this.$router.push("/lovedits");
         location.reload();
