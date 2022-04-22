@@ -15,10 +15,10 @@
             </li>
 
             <li class="dropdown">
-              <a href="#">
+              <router-link class="nav-link" :to="'#'">
                 <span>Your List</span>
                 <i class="bi bi-chevron-down"></i>
-              </a>
+              </router-link>
               <ul>
                 <router-link class="nav-link" :to="'/list'">Not Watched</router-link>
                 <li class="dropdown">
