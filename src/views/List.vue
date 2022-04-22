@@ -65,7 +65,7 @@ export default {
     },
     addMovie: function () {
       axios.post("https://fathomless-tundra-47766.herokuapp.com/lists", this.movie).then(() => {
-        this.$router.push("/lists");
+        this.$router.push("/list");
       });
     },
     lovedIt: function (list) {
