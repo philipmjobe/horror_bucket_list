@@ -30,7 +30,10 @@
                 class="col-lg-4 col-md-6 portfolio-item filter-app"
                 data-layoutmode="fitRows"
                 v-for="movie in orderBy(filterBy(movies, nameFilter, genreFilter, 'name', 'sub_genre'), sortAttribute)"
-                v-on:click="currentMovie = movie"
+                v-on:click="
+                  currentMovie = movie;
+                  scrollToTop();
+                "
                 v-bind:class="{ selected: movie === currentMovie }"
                 :key="movie.id"
               >
@@ -105,6 +108,9 @@ export default {
     },
     setSortAttribute: function (inputAttribute) {
       this.sortAttribute = inputAttribute;
+    },
+    scrollToTop() {
+      window.scrollTo(0, 0);
     },
   },
 };
