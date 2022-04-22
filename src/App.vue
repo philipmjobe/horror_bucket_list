@@ -37,7 +37,7 @@
             <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
             <router-link class="nav-link" :to="'/login'">Sign In</router-link>
             <router-link class="nav-link" :to="'/logout'">Log Out</router-link>
-            <li><a class="getstarted scrollto" href="/signup">Sign Up</a></li>
+            <li><router-link class="nav-link" :to="'/signup'">Sign Up</router-link></li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
