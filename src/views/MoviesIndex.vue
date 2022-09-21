@@ -13,14 +13,14 @@
           </h1>
           <input type="text" v-model="nameFilter" list="names" class="center-this-regular" />
           <datalist id="names">
-            <option v-for="movie in movies" :key="movie.id">{{ movie.name }}</option>
+            <option v-for="movie in movies" :key="movie.id">{{ movie.original_title }}</option>
           </datalist>
         </div>
 
-        <div>
+        <!-- <div>
           <button class="center-this-too" v-on:click="setSortAttribute('name')">Sort By Title</button>
           <button class="center-this-too" v-on:click="setSortAttribute('sub_genre')">Sort By Genre</button>
-        </div>
+        </div> -->
 
         <!-- ======= Movie Section ======= -->
         <section id="portfolio" class="portfolio">
@@ -29,7 +29,7 @@
               <div
                 class="col-lg-4 col-md-6 portfolio-item filter-app"
                 data-layoutmode="fitRows"
-                v-for="movie in orderBy(filterBy(movies, nameFilter, genreFilter, 'name', 'sub_genre'), sortAttribute)"
+                v-for="movie in movies"
                 v-on:click="
                   currentMovie = movie;
                   scrollToTop();
@@ -38,14 +38,14 @@
                 :key="movie.id"
               >
                 <div class="portfolio-wrap">
-                  <img v-bind:src="movie.box_art" v-bind:alt="movie.name" />
+                  <img :src="`https://image.tmdb.org/t/p/original/${movie.poster_path}`" :alt="movie.original_title" />
                   <div class="portfolio-info">
-                    <h4>{{ movie.name }}</h4>
+                    <h4>{{ movie.original_title }}</h4>
                     <p></p>
                     <div class="portfolio-links">
-                      <p>
-                        <b>{{ movie.sub_genre }}</b>
-                      </p>
+                      <!-- <p>
+                          <b>{{ movie.sub_genre }}</b>
+                        </p> -->
                       <router-link v-bind:to="`/movies/${movie.id}`">More Info</router-link>
                     </div>
                   </div>
@@ -101,7 +101,7 @@ export default {
   },
   methods: {
     indexMovies: function () {
-      axios.get("https://fathomless-tundra-47766.herokuapp.com/movies").then((response) => {
+      axios.get("https://fathomless-tundra-47766.herokuapp.com//movies").then((response) => {
         console.log("movies index", response);
         this.movies = response.data;
       });
@@ -111,6 +111,13 @@ export default {
     },
     scrollToTop() {
       window.scrollTo(0, 0);
+    },
+  },
+  computed: {
+    moviesWithPosters() {
+      return this.movies.filter((movie) => {
+        movie.poster_path;
+      });
     },
   },
 };

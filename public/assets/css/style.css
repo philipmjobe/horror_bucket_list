@@ -843,7 +843,7 @@ section {
   text-align: center;
 }
 
-.portfolio #portfolio-flters li {
+/* .portfolio #portfolio-flters li {
   cursor: pointer;
   display: inline-block;
   padding: 8px 15px 10px 15px;
@@ -855,7 +855,7 @@ section {
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
   border-radius: 3px;
-}
+} */
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
@@ -1489,6 +1489,7 @@ section {
   padding: 0 0 30px 0;
   color: #fff;
   font-size: 14px;
+  bottom: 0%;
 }
 
 #footer .footer-top {

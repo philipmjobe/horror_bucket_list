@@ -20,7 +20,7 @@
         <div class="row portfolio-container">
           <div class="col-lg-4 col-md-6 portfolio-item filter-app" v-for="lovedit in lovedits" v-bind:key="lovedit.id">
             <div class="portfolio-wrap">
-              <img :src="`${lovedit.movie.box_art}`" />
+              <img :src="`https://image.tmdb.org/t/p/original/${lovedit.movie.poster_path}`" />
               <br />
               <div class="portfolio-info">
                 <div class="portfolio-links"></div>

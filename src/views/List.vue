@@ -10,7 +10,7 @@
         <div class="row portfolio-container">
           <div class="col-lg-4 col-md-6 portfolio-item filter-app" v-for="list in lists" v-bind:key="list.id">
             <div class="portfolio-wrap">
-              <img :src="`${list.movie.box_art}`" />
+              <img :src="`https://image.tmdb.org/t/p/original/${list.movie.poster_path}`" />
               <br />
 
               <div class="portfolio-info">

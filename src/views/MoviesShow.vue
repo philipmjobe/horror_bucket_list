@@ -4,10 +4,16 @@
     <br />
     <br />
     <br />
-    <h2>{{ movie.name }}</h2>
-    <p style="text-align: center"><img v-bind:src="movie.box_art" v-bind:alt="movie.name" class="thing" /></p>
-    <p>Plot: {{ movie.description }}</p>
-    <p>Sub Genre: {{ movie.sub_genre }}</p>
+    <h2>{{ movie.original_title }}</h2>
+    <p style="text-align: center">
+      <img
+        v-bind:src="`https://image.tmdb.org/t/p/original/${movie.poster_path}`"
+        v-bind:alt="movie.name"
+        class="thing"
+      />
+    </p>
+    <p>Plot: {{ movie.overview }}</p>
+    <!-- <p>Sub Genre: {{ movie.sub_genre }}</p> -->
     <!-- <p>Please Enter Not Watched Loved It or Hated It</p> -->
     <!-- <input class="center-this-three" type="text" v-model="newListCategory" /> -->
     <button class="center-this-four" v-on:click="addMovie()">Add To Watchlist</button>

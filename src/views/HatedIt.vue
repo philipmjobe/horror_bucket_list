@@ -20,7 +20,7 @@
         <div class="row portfolio-container">
           <div class="col-lg-4 col-md-6 portfolio-item filter-app" v-for="hatedit in hatedits" v-bind:key="hatedit.id">
             <div class="portfolio-wrap">
-              <img :src="`${hatedit.movie.box_art}`" />
+              <img :src="`https://image.tmdb.org/t/p/original/${hatedit.movie.poster_path}`" />
               <br />
               <div class="portfolio-info">
                 <div class="portfolio-links"></div>

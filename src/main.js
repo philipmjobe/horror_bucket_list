@@ -13,6 +13,11 @@ if (jwt) {
 
 Vue.config.productionTip = false;
 
+// Vue.filter("removeNullProps", function (poster_path) {
+//   // sorry for using lodash and ES2015 arrow functions :-P
+//   return poster_path.reject(poster_path, (value) => value === null);
+// });
+
 new Vue({
   router,
   render: (h) => h(App),
