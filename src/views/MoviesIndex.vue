@@ -29,7 +29,7 @@
               <div
                 class="col-lg-4 col-md-6 portfolio-item filter-app"
                 data-layoutmode="fitRows"
-                v-for="movie in movies"
+                v-for="movie in pageOfMovies"
                 v-on:click="
                   currentMovie = movie;
                   scrollToTop();
@@ -62,6 +62,9 @@
 
         <!-- End Movie Section -->
       </div>
+      <div class="center-this-five">
+        <jw-pagination :pageSize="100" :items="movies" @changePage="onChangePage"></jw-pagination>
+      </div>
     </main>
   </div>
 </template>
@@ -84,11 +87,13 @@ img {
 <script>
 import axios from "axios";
 import Vue2Filters from "vue2-filters";
+
 export default {
   mixins: [Vue2Filters.mixin],
   data: function () {
     return {
       movies: [],
+      pageOfMovies: [],
       sub_genre: [],
       currentMovie: {},
       nameFilter: "",
@@ -100,8 +105,12 @@ export default {
     this.indexMovies();
   },
   methods: {
+    onChangePage(pageOfMovies) {
+      console.log(pageOfMovies);
+      this.pageOfMovies = pageOfMovies;
+    },
     indexMovies: function () {
-      axios.get("https://fathomless-tundra-47766.herokuapp.com//movies").then((response) => {
+      axios.get("https://fathomless-tundra-47766.herokuapp.com/movies").then((response) => {
         console.log("movies index", response);
         this.movies = response.data;
       });

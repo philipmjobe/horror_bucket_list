@@ -9,6 +9,8 @@ import MoviesShow from "../views/MoviesShow.vue";
 import List from "../views/List";
 import LovedIt from "../views/LovedIt.vue";
 import HatedIt from "../views/HatedIt.vue";
+import JwPagination from "jw-vue-pagination";
+Vue.component("jw-pagination", JwPagination);
 Vue.use(VueRouter);
 
 const routes = [
