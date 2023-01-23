@@ -68,7 +68,7 @@ export default {
   methods: {
     submit: function () {
       axios
-        .post("https://capstoneprojectbackend-production.up.railway.app", this.newUserParams)
+        .post("https://capstoneprojectbackend-production.up.railway.app/users", this.newUserParams)
         .then((response) => {
           console.log(response.data);
           this.$router.push("/login");
