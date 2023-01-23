@@ -79,7 +79,7 @@ export default {
   methods: {
     submit: function () {
       axios
-        .post("https://fathomless-tundra-47766.herokuapp.com/sessions", this.newSessionParams)
+        .post("https://capstoneprojectbackend-production.up.railway.app/sessions", this.newSessionParams)
         .then((response) => {
           axios.defaults.headers.common["Authorization"] = "Bearer " + response.data.jwt;
           localStorage.setItem("jwt", response.data.jwt);

@@ -110,7 +110,7 @@ export default {
       this.pageOfMovies = pageOfMovies;
     },
     indexMovies: function () {
-      axios.get("https://fathomless-tundra-47766.herokuapp.com/movies").then((response) => {
+      axios.get("https://capstoneprojectbackend-production.up.railway.app/movies").then((response) => {
         console.log("movies index", response);
         this.movies = response.data;
       });

@@ -4,7 +4,9 @@ import router from "./router";
 import axios from "axios";
 
 axios.defaults.baseURL =
-  process.env.NODE_ENV === "development" ? "http://localhost:3000" : "https://fathomless-tundra-47766.herokuapp.com/";
+  process.env.NODE_ENV === "development"
+    ? "http://localhost:3000"
+    : "https://capstoneprojectbackend-production.up.railway.app/";
 
 var jwt = localStorage.getItem("jwt");
 if (jwt) {

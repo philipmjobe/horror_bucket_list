@@ -68,7 +68,7 @@ export default {
   methods: {
     submit: function () {
       axios
-        .post("https://fathomless-tundra-47766.herokuapp.com/users", this.newUserParams)
+        .post("https://capstoneprojectbackend-production.up.railway.app", this.newUserParams)
         .then((response) => {
           console.log(response.data);
           this.$router.push("/login");
