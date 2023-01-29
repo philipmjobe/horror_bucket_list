@@ -6,7 +6,7 @@ import axios from "axios";
 axios.defaults.baseURL =
   process.env.NODE_ENV === "development"
     ? "http://localhost:3000"
-    : "https://capstoneprojectbackend-production.up.railway.app/";
+    : "https://capstoneprojectbackend-production.up.railway.app";
 
 var jwt = localStorage.getItem("jwt");
 if (jwt) {
